@@ -18,7 +18,7 @@
 Note: All the downloaded files should be on the same folder on your local machine.
 
 '''
-my online portfolio https://www.maheshareddy.pe.hu/
+my online portfolio http://www.maheshareddy.pe.hu/
 
 '''
     
