@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="searchApp">
+
+  <head>
+    <title>Git Hub Users</title>
+    <link rel="shortcut icon" type="image/png" href="img/m.png"/>
+    <link data-require="bootstrap@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link data-require="fontawesome@4.1.0" data-semver="4.1.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+    <script data-require="angular.js@1.4.9" data-semver="1.4.9" src="https://code.angularjs.org/1.4.12/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-controller="searchController">
+    
+    
+    <div class="mainDiv">
+      <h3>Search GitHub User Profile</h3>
+      <input type="search" placeholder="Enter GitHub User Name" ng-model="searchInpt" />
+      <button ng-click="searchUser()">Search <i class="fa fa-search" aria-hidden="true"></i></button>
+    </div>
+    <div class="results">
+      <h4 ng-show="searching === true">loading...</h4>
+      <h4 ng-show="msg !== ''">{{msg }}</h4>
+    <table ng-if="user.data && user.data.login"  class="table table-hover table-bordered" >
+    <thead>
+      <tr>
+        <th colspan="2">USER DETAILS FOUND</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th colspan="2"> <img height="100" ng-src="{{user.data.avatar_url}}" /></th>
+      </tr>
+      <tr>
+        <th>User Name</th>
+        <td>{{user.data.login }}</td>
+      </tr>
+      <tr>
+        <th> Name</th>
+        <td>{{user.data.name }}</td>
+      </tr>
+      <tr>
+        <th>Email Id</th>
+        <td>{{user.data.email }}</td>
+      </tr>
+      <tr>
+        <th>Profile Url</th>
+        <td>{{user.data.url }}</td>
+      </tr>
+      <tr>
+        <th>Public Repos</th>
+        <td>{{user.data.public_repos }}</td>
+      </tr>
+      <tr>
+        <th>No. Of Gists</th>
+        <td>{{user.data.public_gists }}</td>
+      </tr>
+      <tr>
+        <th>Location</th>
+        <td><i class="fa fa-map-marker" aria-hidden="true"></i> {{user.data.location }}</td>
+      </tr>
+    </tbody>
+  </table>
+      <div ng-show="user.data && user.data.message">
+         User Details {{ user.data.message }} !!
+      </div>
+    </div>
+  </body>
+
+</html>
