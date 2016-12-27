@@ -1,6 +1,12 @@
 # GitHub_Profile_Search
 ======================================================================================
-1 . This is a Sample project used to serach the Details of Gitub Users.
+1 . This is a Sample project used to serach the Details of Gitub Users, on searching , You will get 
+    ●Username.
+    ●Name.
+    ●Email.
+    ●URL to profile.
+    ●Number of public repos and gists.
+    ●Location.
 
 2 . This repositary designed by Basic frontend technologies like HTML5, Css3 and JavaScript framework.
 
